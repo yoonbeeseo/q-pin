@@ -4,6 +4,8 @@ import styles from "./nav.css"
 import { menuReducer, selectIsMenuActive, useAppDispatch, useAppSelector } from "@/redux"
 import { usePathname, useRouter } from "next/navigation"
 import { isMobile } from "react-device-detect"
+import Logo from "../../Logo_L.png"
+import Image from "next/image"
 
 export default function Nav(props: any) {
   useEffect(() => {
@@ -46,7 +48,9 @@ export default function Nav(props: any) {
   return (
     <nav className={styles.container({ isMenuActive })}>
       <div className={styles.wrap({ isMenuActive })}>
-        <button>Logo</button>
+        <button className={styles.imgWrap}>
+          <Image src={Logo} width={100} height={40} alt="Q-Pin Logo" className={styles.img} />
+        </button>
         <div className={styles.line} />
         <div>
           {items.map((item, i) => (

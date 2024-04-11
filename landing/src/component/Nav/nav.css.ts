@@ -63,4 +63,12 @@ export default {
     base: { backgroundColor: "unset" },
     variants: { selected: { true: { color: "royalblue" } }, isWeb: { true: { ":hover": { backgroundColor: "whitesmoke" } } } },
   }),
+  imgWrap: style({
+    padding: 0,
+    backgroundColor: "unset",
+  }),
+  img: style({
+    width: "60%",
+    height: "auto",
+  }),
 }

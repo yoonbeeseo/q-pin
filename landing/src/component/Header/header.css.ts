@@ -1,9 +1,8 @@
 import { style } from "@vanilla-extract/css"
-import { recipe } from "@vanilla-extract/recipes"
 
 export default {
   container: style({
-    border: "1px solid lightgray",
+    borderBottom: "1px solid lightgray",
   }),
   wrap: style({
     flexDirection: "row",
@@ -21,6 +20,11 @@ export default {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+    padding: 0,
+  }),
+  img: style({
+    height: 40,
+    width: "auto",
   }),
   //   menuWrap: style({}),
   //   span1: recipe({}),
