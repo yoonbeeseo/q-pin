@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div,
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+a,
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  color: inherit;
+  border: none;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:active,
+button:active {
+  opacity: 0.5;
+}
