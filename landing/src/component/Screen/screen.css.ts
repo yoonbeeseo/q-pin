@@ -10,5 +10,7 @@ export default {
   wrap: style({
     flex: 1,
     overflowY: "auto",
+    maxWidth: 900,
+    margin: "0 auto",
   }),
 }

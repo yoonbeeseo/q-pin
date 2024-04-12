@@ -1,16 +1,21 @@
 import React from "react"
 import styles from "./section.css"
+import { text } from "@/styles"
 
 export interface SectionProps extends React.PropsWithChildren {
   title: string
-  desc: string
+  desc?: string
 }
-export default function Section({ title, children, desc }: SectionProps) {
+
+interface Props extends SectionProps {
+  white?: boolean
+}
+export default function Section({ title, children, desc, white }: Props) {
   return (
-    <div className={styles.container}>
-      <p className={styles.title}>{title}</p>
-      <p className={styles.sub}>{children}</p>
-      <p className={styles.desc}>{desc} </p>
+    <div className={styles.container({ white })}>
+      <p className={text.title}>{title}</p>
+      <p className={text.sub}>{children}</p>
+      {desc && <p className={text.desc}>{desc} </p>}
     </div>
   )
 }

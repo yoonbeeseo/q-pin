@@ -31,6 +31,7 @@ export default function Nav(props: any) {
     ({ item: { name, path } }: { item: MenuProps }) => {
       const selected = pathname === path
       const onClick = () => {
+        closeFn()
         if (!selected) {
           return router.push(path)
         }
@@ -42,7 +43,7 @@ export default function Nav(props: any) {
         </button>
       )
     },
-    [pathname, isMobile]
+    [pathname, isMobile, closeFn]
   )
 
   return (

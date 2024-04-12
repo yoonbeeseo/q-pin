@@ -12,7 +12,7 @@ const Layout = ({ children }: PropsWithChildren) => {
       <Header />
       <Nav />
       <div className={styles.wrap}> {children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </Screen>
   )
 }
